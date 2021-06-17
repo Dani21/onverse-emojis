@@ -17,8 +17,8 @@
     </clipPath>
   </defs>
   <circle id="Face" r="80" cx="80" cy="80" fill="url(#YellowFace)" clip-path="url(#circle)" filter="url(#spotlight)" />
-  <polygon points="42 45 75 65 72 68 39 48" />
-  <polygon points="118 45 85 65 88 68 121 48" />
+  <rect width="39" height="4" x="33" y="64" transform="rotate(31.6 72 68)" />
+  <rect width="39" height="4" x="88" y="64" transform="rotate(-31.6 88 68)" />
   <rect width="35" height="10" x="37" y="75" />
   <rect width="35" height="10" x="88" y="75" />
   <circle r="10" cx="85" cy="120" />
