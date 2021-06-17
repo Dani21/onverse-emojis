@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="yes"?>
+<svg version="1.0" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="YellowFace" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
+      <stop offset="50%" stop-color="#ffbe12" />
+      <stop offset="70%" stop-color="#f6b401" />
+      <stop offset="100%" stop-color="#9d760b" />
+    </radialGradient>
+    <filter id="spotlight">
+      <feSpecularLighting result="spotlight" specularConstant="0.85" specularExponent="120" lighting-color="#FFF">
+        <fePointLight x="50" y="40" z="240" />
+      </feSpecularLighting>
+      <feComposite in="SourceGraphic" in2="spotlight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+    <clipPath id="circle">
+      <circle cx="80" cy="80" r="78" />
+    </clipPath>
+    <clipPath id="lefteye">
+      <ellipse cx="40" cy="80" rx="15" ry="24" />
+    </clipPath>
+    <clipPath id="righteye">
+      <ellipse cx="105" cy="65" rx="25" ry="40" />
+    </clipPath>
+    <filter id="lefttwinkle">
+      <feSpecularLighting result="spotlight" specularConstant="3" specularExponent="75" lighting-color="#FFF">
+        <fePointLight x="41" y="77" z="15" />
+      </feSpecularLighting>
+      <feComposite in="SourceGraphic" in2="spotlight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+    <filter id="righttwinkle">
+      <feSpecularLighting result="spotlight" specularConstant="3" specularExponent="75" lighting-color="#FFF">
+        <fePointLight x="111" y="42" z="15" />
+      </feSpecularLighting>
+      <feComposite in="SourceGraphic" in2="spotlight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+    <linearGradient id="eyeshadow" x2="70%" y2="100%">
+      <stop offset="60%" stop-color="#fff" />
+      <stop offset="90%" stop-color="#b0a4a4" />
+    </linearGradient>
+    <linearGradient id="irisshadow" x2="75%" y2="100%">
+      <stop offset="0%" stop-color="#fff" />
+      <stop offset="75%" stop-color="#5278db" />
+      <stop offset="95%" stop-color="#3d57a0" />
+    </linearGradient>
+  </defs>
+  <circle id="Face" r="80" cx="80" cy="80" fill="url(#YellowFace)" clip-path="url(#circle)" filter="url(#spotlight)" />
+  <ellipse cx="40" cy="80" rx="20" ry="29" stroke-width="10" stroke="#000" />
+  <g clip-path="url(#lefteye)" filter="url(#lefttwinkle)">
+    <ellipse cx="40" cy="80" rx="20" ry="29" fill="url(#eyeshadow)" />
+    <circle r="12" cx="39" cy="88" />
+  </g>
+  <ellipse cx="105" cy="65" rx="30" ry="45" stroke-width="10" stroke="#000" fill="url(#eyeshadow)"  />
+  <g clip-path="url(#righteye)" filter="url(#righttwinkle)">
+    <ellipse cx="112" cy="49" rx="33" ry="35" fill="url(#irisshadow)" />
+    <circle r="17" cx="112.5" cy="52.5" />
+  </g>
+  <circle r="10" cx="75" cy="125" />
+</svg>

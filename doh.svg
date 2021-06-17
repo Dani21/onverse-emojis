@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<svg version="1.0" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="YellowFace" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
+      <stop offset="50%" stop-color="#ffbe12" />
+      <stop offset="70%" stop-color="#f6b401" />
+      <stop offset="100%" stop-color="#9d760b" />
+    </radialGradient>
+    <filter id="spotlight">
+      <feSpecularLighting result="spotlight" specularConstant="0.85" specularExponent="120" lighting-color="#FFF">
+        <fePointLight x="50" y="40" z="240" />
+      </feSpecularLighting>
+      <feComposite in="SourceGraphic" in2="spotlight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+    <clipPath id="circle">
+      <circle cx="80" cy="80" r="78" />
+    </clipPath>
+  </defs>
+  <circle id="Face" r="80" cx="80" cy="80" fill="url(#YellowFace)" clip-path="url(#circle)" filter="url(#spotlight)" />
+  <polygon points="42 45 75 65 72 68 39 48" />
+  <polygon points="118 45 85 65 88 68 121 48" />
+  <rect width="35" height="10" x="37" y="75" />
+  <rect width="35" height="10" x="88" y="75" />
+  <circle r="10" cx="85" cy="120" />
+</svg>
