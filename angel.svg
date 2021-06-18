@@ -7,17 +7,21 @@
       <stop offset="100%" stop-color="#5d7ca1" />
     </radialGradient>
     <filter id="spotlight">
-      <feSpecularLighting result="spotlight" specularConstant="0.85" specularExponent="120" lighting-color="#FFF">
+      <feSpecularLighting result="spotlight" specularConstant="0.7" specularExponent="120" lighting-color="#FFF">
         <fePointLight x="50" y="40" z="240" />
       </feSpecularLighting>
       <feComposite in="SourceGraphic" in2="spotlight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
     </filter>
     <clipPath id="circle">
-      <circle cx="80" cy="80" r="78" />
+      <circle cx="80" cy="80" r="77" />
     </clipPath>
+    <radialGradient id="halo" gradientTransform="scale(1.06 1) translate(-0.02 0)">
+      <stop offset="84%" stop-color="#c0c034" />
+      <stop offset="100%" stop-color="#e7e75f" />
+    </radialGradient>
   </defs>
-  <ellipse cx="80" cy="41.5" rx="72" ry="34" fill="none" stroke="#ddde57" stroke-width="15" />
-  <circle id="Face" r="80" cx="80" cy="80" fill="url(#BlueFace)" clip-path="url(#circle)" filter="url(#spotlight)" transform="scale(0.91) translate(8 18)" />
+  <ellipse cx="80" cy="41.5" rx="72" ry="34" fill="none" stroke="url(#halo)" stroke-width="15" />
+  <circle id="Face" r="80" cx="80" cy="80" fill="url(#BlueFace)" clip-path="url(#circle)" filter="url(#spotlight)" transform="scale(0.92) translate(7 16)" />
   <rect width="16" height="40" x="28.5" y="40" rx="5" ry="5" />
   <rect width="16" height="40" x="71.5" y="40" rx="5" ry="5" />
   <path d="M 23 97 a 59 64 0 0 0 114 0 a 4 7 20 0 0 -8 0 a 53 54 0 0 1 -98 0 a 4 7 -20 0 0 -8 0 z" transform="scale(0.52) translate(32 95)" />
