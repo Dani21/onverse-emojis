@@ -23,7 +23,7 @@
   </defs>
   <ellipse cx="80" cy="41.5" rx="72" ry="34" fill="none" stroke="url(#halo)" stroke-width="15" />
   <circle id="Face" r="80" cx="80" cy="80" fill="url(#BlueFace)" clip-path="url(#circle)" filter="url(#spotlight)" transform="scale(0.92) translate(7 16)" />
-  <rect width="16" height="40" x="28.5" y="40" rx="5" ry="5" />
-  <rect width="16" height="40" x="71.5" y="40" rx="5" ry="5" />
-  <path d="M 23 97 a 59 64 0 0 0 114 0 a 4 7 20 0 0 -8 0 a 53 54 0 0 1 -98 0 a 4 7 -20 0 0 -8 0 z" transform="scale(0.52) translate(32 95)" />
+  <rect width="16" height="40" x="31" y="40" rx="5" ry="5" transform="skewX(-5) translate(5 0)" />
+  <rect width="16" height="40" x="74" y="40" rx="5" ry="5" transform="skewX(-5) translate(5 0)" />
+  <path d="M 23 97 a 59 66 15 0 0 114 0 a 4 7 20 0 0 -8 0 a 52 54 40 0 1 -98 0 a 4 7 -20 0 0 -8 0 z" transform="scale(0.52) translate(32 95)" />
 </svg>
