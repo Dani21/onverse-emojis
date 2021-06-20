@@ -15,9 +15,10 @@
     <clipPath id="circle">
       <circle cx="80" cy="80" r="77" />
     </clipPath>
-    <radialGradient id="halo" gradientTransform="scale(1.06 1) translate(-0.02 0)">
-      <stop offset="84%" stop-color="#c0c034" />
-      <stop offset="100%" stop-color="#e7e75f" />
+    <radialGradient id="halo" cx="47%" cy="53%" spreadMethod="reflect">
+      <stop offset="74%" stop-color="#a7a72d" />
+      <stop offset="94%" stop-color="#e7e75f" />
+      <stop offset="100%" stop-color="#f0f065" />
     </radialGradient>
   </defs>
   <ellipse cx="80" cy="41.5" rx="72" ry="34" fill="none" stroke="url(#halo)" stroke-width="15" />
