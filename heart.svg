@@ -1,6 +1,39 @@
 <?xml version="1.0" standalone="yes"?>
-<svg version="1.0" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
-  <defs>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="160" height="160">
+  <defs xmlns="http://www.w3.org/2000/svg">
+    <filter id="Blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+    </filter>
+    <filter id="Blur2">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+    </filter>
+    <radialGradient id="Shine" cx="0.3" cy="0.4" r="0.5" fx="0.25" fy="0.25">
+      <stop offset="15%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.5"/>
+    </radialGradient>
+    <clipPath id="Heart">
+      <path transform="scale(0.9375) translate(5 11)" d="M 80,31 C 67.063,-9.173 26.64,-6.253 11.917,14.146 -4.99,37.572 -3.51,66.556 16.166,88.085 30.486,105.177 39.17,105.607 60.69,125.212 73.79,137.222 80,152.118 80,152 80,152.118 86.21,137.222 98.31,125.212 120.83,105.607 129.514,105.177 143.834,88.085 163.51,66.556 164.99,37.572 148.083,14.146 133.36,-6.253 92.937,-9.173 80,31 Z"/>
+    </clipPath>
+    <linearGradient id="ShadowLeft" x1="0.2" x2="1" y1="1" y2="0">
+      <stop offset="28%" stop-color="#a00" stop-opacity="1"/>
+      <stop offset="36%" stop-color="#a00" stop-opacity="0.8"/>
+      <stop offset="48%" stop-color="#a00" stop-opacity="0.2"/>
+      <stop offset="58%" stop-color="#a00" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ShadowRight" x1="1" x2="0" y1="1" y2="0">
+      <stop offset="32%" stop-color="#900" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#900" stop-opacity="0.8"/>
+      <stop offset="42%" stop-color="#900" stop-opacity="0.2"/>
+      <stop offset="52%" stop-color="#900" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="ShadowMask">
+      <rect width="160" height="160" x="0" y="0" fill="#000"/>
+      <path fill="#fff" d="M 0,80 160,40 160,160 0,160 Z" filter="url(#Blur2)"/>
+    </mask>
   </defs>
-  <path transform="scale(0.9375) translate(5 11)" fill="#f00" d="M 80,38 C 71.063,-9.173 26.64,-6.253 11.917,14.146 -4.99,37.572 -3.51,66.556 16.166,88.085 30.486,105.177 39.17,105.607 66.69,131.212 73.79,137.222 80,148.118 80,160 80,148.118 86.21,137.222 93.31,131.212 120.83,105.607 129.514,105.177 143.834,88.085 163.51,66.556 164.99,37.572 148.083,14.146 133.36,-6.253 88.937,-9.173 80,38 Z" />
+  <rect clip-path="url(#Heart)" fill="#f00" width="160" height="160" x="0" y="0"/>
+  <path filter="url(#Blur)" transform="scale(0.9375) translate(5 11)" fill="url(#Shine)" d="M 72,25 C 35,-24 -15,30 23,75 16,30 40,16 72,25 Z"/> 
+  <path fill="url(#Shine)" filter="url(#Blur)" transform="scale(0.9375) translate(5 11)" d="M 145,12 C 105,-10 85,30 94,46 110,30 110,25 145,12 Z"/>
+  <path clip-path="url(#Heart)" fill="url(#ShadowLeft)" filter="url(#Blur)" mask="url(#ShadowMask)" d="M 0,30 110,110 60,160 0,160 Z"/>
+  <path clip-path="url(#Heart)" fill="url(#ShadowRight)" filter="url(#Blur)" d="M 160,10 20,160 160,160 Z"/>
 </svg>
