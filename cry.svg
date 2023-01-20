@@ -1,5 +1,5 @@
 <?xml version="1.0" standalone="yes"?>
-<svg version="1.0" width="160" height="160" xmlns="http://www.w3.org/2000/svg" style="background-color:#000" transform="translate(-5 0)">
+<svg version="1.0" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="BlueFace" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
       <stop offset="50%" stop-color="#91c0fb" />
@@ -15,10 +15,21 @@
     <clipPath id="circle">
       <circle cx="80" cy="80" r="78" />
     </clipPath>
+    <radialGradient id="Tear" cx="0.3" cy="0.5" r="1" fx="0.25" fy="0.25">
+      <stop offset="30%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#7099d2"/>
+    </radialGradient>
+    <filter id="Shadow" width="150%" height="125%">
+      <feFlood result="flood" flood-color="#555577"/>
+      <feComposite result="composite1" operator="in" in="flood" in2="SourceGraphic"/>
+      <feGaussianBlur result="blur" stdDeviation="1" in="composite1"/>
+      <feOffset result="offset" dx="4" dy="4"/>
+      <feComposite result="composite2" operator="over" in="SourceGraphic" in2="offset"/>
+    </filter>
   </defs>
-  <rect width="160" height="160" fill="#fff"/>
   <circle id="Face" r="80" cx="80" cy="80" fill="url(#BlueFace)" clip-path="url(#circle)" filter="url(#spotlight)" />
   <rect width="17" height="41" x="43" y="27" rx="5" ry="5" transform="rotate(45 47 58)"  />
   <rect width="17" height="41" x="100" y="27" rx="5" ry="5" transform="rotate(-45 113 58)" />
   <path d="M 33.5 125 a 56 65 0 0 1 93 0 a 4 7 -25 0 1 -8 0 a 50 54 0 0 0 -77 0 a 4 7 25 0 1 -8 0 z" />
+  <path d="M 115 68 a 18 20 150 0 1 16 34 a 9 16 20 0 1 -12 0 a 60 35 0 0 1 6 -26 a -9 -11 50 0 1 -10 -8 z" fill="url(#Tear)" filter="url(#Shadow)"/>
 </svg>

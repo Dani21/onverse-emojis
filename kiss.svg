@@ -1,5 +1,5 @@
 <?xml version="1.0" standalone="yes"?>
-<svg version="1.0" width="160" height="160" xmlns="http://www.w3.org/2000/svg" style="background-color:#000" transform="translate(-2 0)">
+<svg version="1.0" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="BlueFace" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
       <stop offset="50%" stop-color="#91c0fb" />
@@ -37,6 +37,10 @@
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
+    <radialGradient id="Shine2Gradient" cx="0.5" cy="0.5" r="0.5" fy="0.65" fx="0.6">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
     <clipPath id="LowerLip">
       <rect width="80" height="30" x="40" y="112" />
     </clipPath>
@@ -47,12 +51,12 @@
       <rect width="26" height="26" x="67" y="107" fill="url(#MouthGradient)" clip-path="url(#LowerLip)"/>
     </mask>
   </defs>
-  <rect width="160" height="160" fill="#fff"/>
   <circle id="Face" r="80" cx="80" cy="80" fill="url(#BlueFace)" clip-path="url(#circle)" filter="url(#spotlight)" />
   <path d="M 20 71 a 25 23 0 0 1 50 0" stroke="#111" stroke-width="8" stroke-linecap="round" fill="none" />
   <path d="M 90 71 a 25 23 0 0 1 50 0" stroke="#111" stroke-width="8" stroke-linecap="round" fill="none" />
   <circle r="36" cx="80" cy="112" fill="url(#LipShadow)" clip-path="url(#lips)" />
   <rect width="80" height="26" x="40" y="86" fill="url(#LipShade)" clip-path="url(#lips)" mask="url(#LipMask)" />
-  <rect width="80" height="22.5" x="40" y="112" style="fill:url(#LipShade)" clip-path="url(#lips)" mask="url(#LipMask)" />
-  <ellipse cx="65" cy="113" rx="10" ry="6" style="fill:url(#ShineGradient)" mask="url(#LipMask)" clip-path="url(#LowerLip)" />
+  <rect width="80" height="22.5" x="40" y="112" fill="url(#LipShade)" clip-path="url(#lips)" mask="url(#LipMask)" />
+  <ellipse cx="65" cy="113" rx="10" ry="6" fill="url(#ShineGradient)" mask="url(#LipMask)" clip-path="url(#LowerLip)" />
+  <ellipse cx="71" cy="91" rx="9" ry="6" fill="url(#Shine2Gradient)" clip-path="url(#Lips)"/>
 </svg>
